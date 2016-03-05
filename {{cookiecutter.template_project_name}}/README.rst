@@ -3,7 +3,8 @@
 {{ cookiecutter.template_project_name }}
 ==================================================
 
-Cookiecutter template for {{ cookiecutter.template_project_name|replace('-', ' ')|replace('_', ' ') }}.
+{# First 'cookiecutter-'(used in almost cases) is removed. #}
+Cookiecutter template for {{ cookiecutter.template_project_name|replace('cookiecutter-', '', 1)|replace('-', ' ')|replace('_', ' ') }}.
 
 Requirements
 ------------
