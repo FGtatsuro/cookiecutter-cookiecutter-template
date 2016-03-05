@@ -2,7 +2,6 @@
 
 {{ cookiecutter.template_project_name }}
 ==================================================
-
 {# First 'cookiecutter-'(used in almost cases) is removed. #}
 Cookiecutter template for {{ cookiecutter.template_project_name|replace('cookiecutter-', '', 1)|replace('-', ' ')|replace('_', ' ') }}.
 
