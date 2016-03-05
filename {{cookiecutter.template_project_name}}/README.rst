@@ -18,7 +18,18 @@ You can create new project of Cookiecutter template as follows.
 .. code:: bash
 
     $ cookiecutter gh:FGtatsuro/{{ cookiecutter.template_project_name }}
-    TODO:
+    ...
+    project_name [Name of generated project]: test-project
+    project_description [Description of generated project]: Test Project
+    year [2016]:
+    author [FGtatsuro]:
+    ...
+    $ cd use-generated-template
+    $ ls -1a
+    .
+    ..
+    LICENSE
+    README.rst
 
 You can overwrite default value of the field prompt asks with `~/.cookiecutterrc`.
 It's better to overwrite 'author' field with your Github username.
