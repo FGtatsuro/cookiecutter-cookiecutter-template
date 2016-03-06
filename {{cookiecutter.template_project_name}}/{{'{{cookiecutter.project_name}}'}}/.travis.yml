@@ -1,0 +1,37 @@
+---
+# https://docs.travis-ci.com/user/multi-os/
+matrix:
+  include:
+    - os: osx
+      language: generic
+      env:
+        - TARGET=localhost
+    - os: linux
+      dist: trusty
+      language: python
+      python: 2.7
+      services:
+        - docker
+      addons:
+        apt:
+          packages:
+          - python-pip
+      before_script:
+        - docker run -it -d --name container python:2 /bin/bash
+        # Workaround: Docker connection plugin of Ansible requires that
+        # Python is installed at specified path(/usr/bin/python) in the target container
+        - docker exec container ln -s /usr/local/bin/python /usr/bin/python
+      after_script:
+        - docker rm -f container
+      env:
+        - TARGET=container
+
+sudo: required
+
+install:
+  # TODO: Do something
+  - bundle install
+
+script:
+  # TODO: Do something
+  - bundle exec rake spec SPEC_TARGET=${TARGET}

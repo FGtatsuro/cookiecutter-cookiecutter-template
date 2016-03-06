@@ -8,6 +8,12 @@
 Requirements
 ------------
 
+The dependencies on other softwares/librarys for this project.
+
+- Debian
+- OSX
+    - Homebrew (>= 0.9.5)
+
 How to
 ------
 
