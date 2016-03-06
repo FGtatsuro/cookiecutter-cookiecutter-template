@@ -29,14 +29,9 @@ matrix:
 sudo: required
 
 install:
-  - sudo pip install -e "git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter"
+  # TODO: Do something
+  - bundle install
 
 script:
-  # On this project
-  - cookiecutter --replay --config-file tests/cookiecutterrc .
-  - cd test_project
-  # On generated Cookiecutter template
-  - cookiecutter --replay --config-file tests/cookiecutterrc .
-  - cd test_project
-  - bundle install
+  # TODO: Do something
   - bundle exec rake spec SPEC_TARGET=${TARGET}
