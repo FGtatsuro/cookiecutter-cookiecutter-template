@@ -1,7 +1,7 @@
-|Build Status|
-
 cookiecutter-cookiecutter-template
 ==================================
+
+|Build Status|
 
 Cookiecutter template for Cookiecutter template.
 
@@ -54,10 +54,10 @@ You can create new project of Cookiecutter template as follows.
     $ cat ~/.cookiecutterrc
     default_context:
         author: "FGtatsuro"
-    
+
     $ cookiecutter gh:FGtatsuro/cookiecutter-cookiecutter-template
     ...
-    author [FGtatsuro]: 
+    author [FGtatsuro]:
     ...
 
 .. |Build Status| image:: https://travis-ci.org/FGtatsuro/cookiecutter-cookiecutter-template.svg?branch=master
