@@ -1,9 +1,9 @@
-|Build Status|
-
 {{ cookiecutter.template_project_name }}
 ==================================================
 {# First 'cookiecutter-'(used in almost cases) is removed. #}
 Cookiecutter template for {{ cookiecutter.template_project_name|replace('cookiecutter-', '', 1)|replace('-', ' ')|replace('_', ' ') }}.
+
+|Build Status|
 
 Requirements
 ------------
@@ -39,10 +39,10 @@ It's better to overwrite 'author' field with your Github username.
     $ cat ~/.cookiecutterrc
     default_context:
         author: "FGtatsuro"
-    
+
     $ cookiecutter gh:FGtatsuro/{{ cookiecutter.template_project_name }}
     ...
-    author [FGtatsuro]: 
+    author [FGtatsuro]:
     ...
 
 .. |Build Status| image:: https://travis-ci.org/FGtatsuro/{{ cookiecutter.template_project_name }}.svg?branch=master

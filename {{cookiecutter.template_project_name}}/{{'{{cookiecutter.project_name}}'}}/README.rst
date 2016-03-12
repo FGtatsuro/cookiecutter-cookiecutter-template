@@ -1,7 +1,7 @@
-|Build Status|
-
 {{ '{{ cookiecutter.project_name }}' }}
 ==================================================
+
+|Build Status|
 
 {{ '{{ cookiecutter.project_description }}' }}
 
