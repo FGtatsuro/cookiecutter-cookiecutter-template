@@ -1,4 +1,8 @@
 ---
+branches:
+  only:
+  - master
+
 # https://docs.travis-ci.com/user/multi-os/
 matrix:
   include:
@@ -6,6 +10,10 @@ matrix:
       language: generic
       env:
         - TARGET=localhost
+        - PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
+      install:
+        - sudo pip install -U setuptools
+        - sudo pip install -e "git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter"
     - os: linux
       dist: trusty
       language: python
@@ -29,7 +37,7 @@ matrix:
 sudo: required
 
 install:
-  - sudo pip install -e "git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter"
+  - pip install -e "git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter"
 
 script:
   # On this project
