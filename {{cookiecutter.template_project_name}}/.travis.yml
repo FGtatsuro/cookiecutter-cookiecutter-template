@@ -37,7 +37,7 @@ matrix:
 sudo: required
 
 install:
-  - pip install -e "git+https://github.com/audreyr/cookiecutter.git#egg=cookiecutter"
+  - pip install cookiecutter
 
 script:
   - cookiecutter --replay --config-file tests/cookiecutterrc .
