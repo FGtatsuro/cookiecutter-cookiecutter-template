@@ -8,7 +8,7 @@
 Requirements
 ------------
 
-The dependencies on other softwares/librarys for this project.
+The dependencies on other softwares/libraries for this project.
 
 - Debian
 - OSX
