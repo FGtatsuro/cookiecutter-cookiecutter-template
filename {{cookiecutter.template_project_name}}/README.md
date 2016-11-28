@@ -8,7 +8,7 @@ Cookiecutter template for {{ cookiecutter.template_project_name|replace('cookiec
 Requirements
 ------------
 
-Cookiecutter (>=1.3.0) (<https://github.com/audreyr/cookiecutter>)
+Cookiecutter (>=1.4.x) (<https://github.com/audreyr/cookiecutter>)
 
 How to
 ------
