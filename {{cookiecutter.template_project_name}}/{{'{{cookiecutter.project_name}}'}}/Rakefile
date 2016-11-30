@@ -12,7 +12,7 @@ namespace :spec do
     },
     {
       :name     =>  'container',
-      :backend  =>  'docker' 
+      :backend  =>  'docker'
     }
   ]
   if ENV['SPEC_TARGET'] then
@@ -27,7 +27,7 @@ namespace :spec do
     desc "Run serverspec tests to #{host[:name]}(backend=#{host[:backend]})"
     RSpec::Core::RakeTask.new(host[:name].to_sym) do |t|
       ENV['TARGET_HOST'] = host[:name]
-      ENV['SPEC_TARGET_BACKEND'] = host[:backend]
+      ENV['TARGET_BACKEND'] = host[:backend]
       t.pattern = "{{ '{{ cookiecutter.project_name }}' }}_spec.rb"
     end
   end
