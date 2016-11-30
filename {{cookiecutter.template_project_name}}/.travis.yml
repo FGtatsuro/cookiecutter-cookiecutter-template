@@ -25,14 +25,12 @@ matrix:
           packages:
           - python-pip
       before_script:
-        - docker run -it -d --name container python:2 /bin/bash
-        # Workaround: Docker connection plugin of Ansible requires that
-        # Python is installed at specified path(/usr/bin/python) in the target container
-        - docker exec container /bin/bash -c "if [ ! -e /usr/bin/python -a -e /usr/local/bin/python ]; then /bin/ln -s /usr/local/bin/python /usr/bin/python; fi"
+        - docker run -it -d --name ${TARGET} ${IMAGE_NAME} /bin/bash
       after_script:
         - docker rm -f container
       env:
         - TARGET=container
+        - IMAGE_NAME=fgtatsuro/infra-bridgehead:alpine-3.3
 
 sudo: required
 
