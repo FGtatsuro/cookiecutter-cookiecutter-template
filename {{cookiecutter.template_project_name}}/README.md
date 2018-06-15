@@ -20,7 +20,7 @@ $ cookiecutter gh:FGtatsuro/{{ cookiecutter.template_project_name }}
 ...
 project_name [Name of generated project]: test-project
 project_description [Description of generated project]: Test Project
-year [2016]:
+year [2018]:
 author [FGtatsuro]:
 ...
 $ cd test-project
